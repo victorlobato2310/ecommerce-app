@@ -1,0 +1,18 @@
+<header>
+  <a id="title" routerLink="/">{{ title }}</a>
+  <div class="container">
+    <div class="search__container">
+      <input type="text" placeholder="Procurando por algo específico?">
+      <img [src]="searchUrl" width="20" height="20" alt="Lupa">
+    </div>
+    <div class="shoppingcart__container">
+      <a id="shoppingcart" routerLink="/" type="button">
+        <img [src]="cartUrl" width="24" height="24" alt="Carrinho de compras">
+      </a>
+      <div class="shoppingcart__container--notification">
+        <span>{{ shoppingCartItemsCount }}</span>
+        <img [src]="notificationUrl" width="17" height="17" alt="Notificação">
+      </div>
+    </div>
+  </div>
+</header>

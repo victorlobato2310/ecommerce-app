@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap');
+
+:root {
+
+  --primary-grey-color: #5D5D6D;
+  --secondary-grey-color: #737380;;
+  --primary-grey-bgcolor: #F3F5F6;
+  --white-color: #FFFFFF;
+  --font-family-sairaStencilOne: 'Saira Stencil One';
+  --font-family-saira: 'Saira';
+}
+
+body {
+  margin: 0;
+  top: 0;
+  box-sizing: border-box;
+  background: #DEDEDE;
+}
+
