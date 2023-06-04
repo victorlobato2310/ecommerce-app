@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ILocalStorageSource } from 'src/app/models/local-storage-source.model';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { ILocalStorageSource } from '@app/models/local-storage-source.model';
+import { LocalStorageService } from '@app/services/local-storage.service';
 
 @Component({
   selector: 'app-header',
