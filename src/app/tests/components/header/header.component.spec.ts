@@ -7,13 +7,15 @@ import "@src/test-setup";
 const LocalStorageServiceMock = {
   set: jest.fn(),
   get: jest.fn(),
-  delete: jest.fn()
+  delete: jest.fn(),
+  clearAll: jest.fn()
 }
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   let mockItem =  {
+    id: 1,
     name: 'Caneca de cerâmica rústica',
     description: "lorem lorem",
     image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/caneca-06.jpg',
