@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ISessionStorageSource } from 'src/app/models/session-storage-source.model';
-import { SessionStorageService } from 'src/app/services/session-storage.service';
+import { ILocalStorageSource } from 'src/app/models/local-storage-source.model';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -15,19 +15,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
   shoppingCartItemsCount!: number;
   selectedItems: any[] = [];
 
-  constructor(private __sessionStorageService: SessionStorageService){}
+  constructor(private __localStorageService: LocalStorageService){}
 
   ngOnDestroy(){
-    this.__sessionStorageService.sessionStorageSource$.unsubscribe();
+    this.__localStorageService.localStorageSource$.unsubscribe();
   }
 
   ngOnInit(): void {
     let shoppingCartInterval = setInterval(() => {
-      this.__sessionStorageService.get();
+      this.__localStorageService.get();
       clearInterval(shoppingCartInterval);
     }, 1000);
 
-    this.__sessionStorageService.sessionStorageSource$.subscribe(({ count, items }: ISessionStorageSource) => {
+    this.__localStorageService.localStorageSource$.subscribe(({ count, items }: ILocalStorageSource) => {
       this.shoppingCartItemsCount = count;
       this.selectedItems = items;
     });
