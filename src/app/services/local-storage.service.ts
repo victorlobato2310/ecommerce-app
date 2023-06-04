@@ -41,4 +41,8 @@ export class LocalStorageService {
     localStorage.setItem(key, JSON.stringify(updatedItems));
     this.localStorageSource$.next({ count: updatedItems.length, items: updatedItems });
   }
+
+  clearAll(){
+    localStorage.clear();
+  }
 }
