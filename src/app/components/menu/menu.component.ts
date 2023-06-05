@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItemType } from '@src/app/enums/menu-item-type.enum';
 import { IMenuItem } from '@src/app/models/menu-item.model';
 
@@ -7,7 +7,7 @@ import { IMenuItem } from '@src/app/models/menu-item.model';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
   menuItems: IMenuItem[] = [
     { name: "Todos os produtos", isActived: true, type: MenuItemType.ALL },
     { name: "Camisetas", isActived: false, type: MenuItemType.TSHIRTS },
@@ -17,6 +17,8 @@ export class MenuComponent {
   selectedItem: MenuItemType = MenuItemType.ALL;
 
   constructor(){}
+
+  ngOnInit(): void {}
 
   setActivedItem(item: IMenuItem, itemIndex: number) {
     this.menuItems.map((item: IMenuItem) => {
