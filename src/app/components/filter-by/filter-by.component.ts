@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterByItemType, IFilterByItem } from '@src/app/models/filter-by-item.model';
+import { FilterByItemType } from '@src/app/enums/filter-by-item-type.enum';
+import { IFilterByItem } from '@src/app/models/filter-by-item.model';
 
 @Component({
   selector: 'app-filter-by',
@@ -9,7 +10,7 @@ import { FilterByItemType, IFilterByItem } from '@src/app/models/filter-by-item.
 export class FilterByComponent implements OnInit {
 
   filterItems: IFilterByItem[] = [
-    { name: "Novidades", type: FilterByItemType.ALL },
+    { name: "Novidades", type: FilterByItemType.NEWS },
     { name: "Preço: Maior - menor", type: FilterByItemType.BIGGEST_PRICE },
     { name: "Preço: Menor - maior", type: FilterByItemType.LOWEST_PRICE },
     { name: "Mais vendidos", type: FilterByItemType.BEST_SELLING }

@@ -1,10 +1,7 @@
+import { FilterByItemType } from "../enums/filter-by-item-type.enum";
+
 export interface IFilterByItem {
   name: string;
-  type: FilterByItemType
+  type: FilterByItemType;
 }
-export enum FilterByItemType {
-  ALL = 'all',
-  BIGGEST_PRICE = 'biggest price',
-  LOWEST_PRICE = 'lowest price',
-  BEST_SELLING = 'best selling'
-}
+

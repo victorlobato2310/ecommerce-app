@@ -1,5 +1,6 @@
 export enum FilterByItemType {
-  ALL = 'all',
-  TSHIRTS = 't-shirts',
-  MUGS = 'mugs'
+  NEWS = 'news',
+  BIGGEST_PRICE = 'biggest price',
+  LOWEST_PRICE = 'lowest price',
+  BEST_SELLING = 'best selling'
 }
