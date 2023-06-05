@@ -1,14 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '../app.component';
-import { HeaderComponent } from '@app/components/header/header.component';
+import { HeaderModule } from '@app/components/header/header.module';
+import { FilterByModule } from '@app/components/filter-by/filter-by.module';
+import { MenuModule } from '@app/components/menu/menu.module';
+
 import "@src/test-setup";
-
-
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent, HeaderComponent]
+    imports: [RouterTestingModule, HeaderModule, MenuModule, FilterByModule],
+    declarations: [AppComponent]
   }));
 
   it('should create the app', () => {
