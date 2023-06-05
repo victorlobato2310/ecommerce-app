@@ -1,6 +1,7 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderComponent } from '@app/components/header/header.component';
+import { HeaderModule } from '@src/app/components/header/header.module';
 import { LocalStorageService } from '@src/app/services/local-storage.service';
 import "@src/test-setup";
 
@@ -25,7 +26,7 @@ describe('HeaderComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent],
-      imports: [RouterTestingModule.withRoutes([]),],
+      imports: [RouterTestingModule.withRoutes([]), HeaderModule],
       providers: [{ provide: LocalStorageService, value: LocalStorageServiceMock }]
     }).compileComponents();
     jest.useFakeTimers();
