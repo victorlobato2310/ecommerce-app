@@ -1,0 +1,6 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let item of menuItems; let index = index" [ngClass]="{'isActived': item.isActived }" (click)="setActivedItem(item, index)">{{ item.name }}</li>
+  </ul>
+  <app-filter-by></app-filter-by>
+</div>

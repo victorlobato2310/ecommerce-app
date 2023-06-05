@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+
+    li {
+      font-family: var(--font-family-saira);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: var(--secondary-grey-color);
+      list-style-type: none;
+      cursor: pointer;
+    }
+
+    li + li {
+      margin-left: 40px;
+    }
+  }
+}
+
+.isActived {
+  border-bottom: 4px solid #FFA585;
+}
