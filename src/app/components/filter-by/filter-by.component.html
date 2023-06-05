@@ -1,0 +1,9 @@
+<div class="container">
+   <div class="filter-container" (click)="openFilterBox()">
+    <span>Organizar por</span>
+    <img [src]="arrowUrl" width="8" height="4" alt="Seta do Filtro de Seleção">
+   </div>
+    <ul *ngIf="isOpenFilterBox">
+      <li *ngFor="let item of filterItems" (click)="setSelectedItem(item)">{{ item.name }}</li>
+    </ul>
+</div>
